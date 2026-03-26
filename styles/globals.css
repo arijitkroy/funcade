@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ─── UNO Theme ─── */
+@theme inline {
+  --color-background: #121212;
+  --color-foreground: #f5f5f5;
+  --color-uno-red: #E53935;
+  --color-uno-purple: #8E24AA;
+  --color-uno-green: #43A047;
+  --color-uno-blue: #1E88E5;
+  --color-uno-gold: #FDD835;
+  --color-uno-dark: #121212;
+  --color-uno-surface: #1e1e1e;
+  --color-uno-surface-light: #2a2a2a;
+  --color-uno-card: #ffffff;
+  --color-uno-text: #f5f5f5;
+  --color-uno-muted: #888888;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Base ─── */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+/* ─── Animations ─── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(253, 216, 53, 0.4); }
+  50% { box-shadow: 0 0 24px rgba(253, 216, 53, 0.8); }
+}
+@keyframes card-play {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-80px) scale(1.15); opacity: 0.9; }
+  100% { transform: translateY(-40px) scale(0.8); opacity: 0; }
+}
+@keyframes card-draw {
+  0% { transform: translateX(0) scale(0.6); opacity: 0; }
+  100% { transform: translateX(0) scale(1); opacity: 1; }
+}
+@keyframes slide-up {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+@keyframes stack-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-glow-pulse { animation: glow-pulse 2s ease-in-out infinite; }
+.animate-card-play { animation: card-play 0.5s ease-out forwards; }
+.animate-card-draw { animation: card-draw 0.4s ease-out forwards; }
+.animate-slide-up { animation: slide-up 0.5s ease-out forwards; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 8s linear infinite; }
+.animate-shake { animation: shake 0.3s ease-in-out; }
+.animate-stack-bounce { animation: stack-bounce 0.4s ease-out; }
+.animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+.animate-bounce-subtle { animation: bounce-subtle 3s ease-in-out infinite; }
+
+/* ─── Glass Effect ─── */
+.glass {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Card Hover ─── */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-12px) scale(1.05);
+  z-index: 10;
+}
+
+/* ─── UNO Button Pulse ─── */
+.uno-btn-pulse {
+  animation: glow-pulse 1.5s ease-in-out infinite;
+  background: linear-gradient(135deg, #E53935, #FDD835);
+}
+
+/* ─── Turn Glow ─── */
+.turn-glow {
+  box-shadow: 0 0 16px rgba(253, 216, 53, 0.6), 0 0 32px rgba(253, 216, 53, 0.3);
+}
