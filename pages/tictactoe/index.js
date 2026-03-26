@@ -177,6 +177,15 @@ export default function TicTacToeHome() {
               </div>
             )}
 
+            <div className="mt-6 text-center">
+              <a
+                href="/tictactoe/rules"
+                className="text-xs text-gray-500 hover:text-pink-500 transition-colors uppercase tracking-widest font-bold underline underline-offset-4"
+              >
+                How to play Tic-Tac-Toe Advanced →
+              </a>
+            </div>
+
             <div className="text-center pt-4">
               <button onClick={() => router.push('/')} className="text-xs text-gray-500 hover:text-white transition-colors uppercase tracking-widest font-bold">
                 ← Back to Funcade Mainframe

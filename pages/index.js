@@ -49,27 +49,36 @@ export default function FuncadeHome() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <GameTile 
             title="UNO No Mercy" 
-            description="The classic game with a ruthless twist. Stacking penalties, brutal action cards, and no turning back."
+            description="The classic game with a ruthless twist."
             imageColor="from-red-600 via-red-900 to-black"
-            coverImage="/assets/card_back.png"
+            coverImage="/uno_cover.png"
             href="/uno"
             isAvailable={true}
           />        
 
           <GameTile 
             title="Tic-Tac-Toe Advanced" 
-            description="The classic grid game reimagined for the cyber age. Custom board sizes, custom win states, pure neon domination."
+            description="The classic grid game reimagined for the cyber age."
             imageColor="from-purple-600 via-indigo-900 to-black"
-            coverImage="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop"
+            coverImage="/tictactoe_cover.png"
             href="/tictactoe"
             isAvailable={true}
           />
 
           <GameTile 
+            title="Cyber Checkers" 
+            description="The classic Chinese Checkers transposed into a neon matrix."
+            imageColor="from-cyan-600 via-blue-900 to-fuchsia-900"
+            coverImage="/cybercheckers_cover.png"
+            href="/cybercheckers"
+            isAvailable={true}
+          />
+
+          <GameTile 
             title="Coming Soon" 
-            description="Coming soon."
-            imageColor="from-green-600 via-emerald-900 to-black"
-            coverImage="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop"
+            description="Coming soon"
+            imageColor="from-cyan-600 via-blue-900 to-fuchsia-900"
+            coverImage="/coming_soon_cover.png"
             isAvailable={false}
           />
         </div>

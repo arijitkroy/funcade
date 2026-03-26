@@ -1,6 +1,6 @@
 # Funcade: Real-Time Multiplayer Web Arcade
 
-**Funcade** is a high-performance, real-time multiplayer arcade built with Next.js, React, Tailwind CSS, and Firebase. The platform currently hosts two premium, fully synchronized games: **UNO No Mercy** and **Neon Tic-Tac-Toe**. The application features an ultra-responsive user interface, robust turn management, and deep Firestore synchronization for a seamless competitive experience across the globe.
+**Funcade** is a high-performance, real-time multiplayer arcade built with Next.js, React, Tailwind CSS, and Firebase. The platform currently hosts three premium, fully synchronized games: **UNO No Mercy**, **Tic-Tac-Toe Advanced**, and **Cyber Checkers**. The application features an ultra-responsive user interface, robust turn management, and deep Firestore synchronization for a seamless competitive experience across the globe.
 
 ## Hosted Games
 
@@ -10,11 +10,17 @@
 - **Turn Inactivity Mechanism:** Features a 15-second turn timer with automated server-side skipping for inactive players to maintain game momentum.
 - **Match Resumption Flow:** Utilizes session persistence, allowing players to instantly resume interrupted matches or return to their lobby after a page refresh.
 
-### Tic-Tac-Toe
+### Tic-Tac-Toe Advanced
 - **Dynamic Board Scaling:** Create custom matches with adaptable board sizes (e.g., 3x3 to 5x5) and adjustable win conditions (e.g., connect 4 to win).
 - **Cinematic Start Sequences:** Features a synchronized, 3D CSS slot-machine-style dice roll overlay powered by cryptographic RNG to randomly determine the starting player.
 - **Visual Strikethroughs:** Victory states instantly calculate winning matrix coordinates and render a blazing-hot SVG line across the winning sequence.
 - **Infinite Rematches & Score Tracking:** Persistent `[X] VS [Y]` scoring is tallied in real-time across consecutive rematches without disbanding the lobby.
+
+### Cyber Checkers
+- **Dynamic Network Layouts:** Configure the board shape before the match begins. Options include the Classic Star (121 cells), Compact Star, Hexagon Duel, Diamond Clash, and Neon Corridor.
+- **Advanced Pathfinding Engine:** A high-performance DFS/BFS recursive logic engine written in standard JS evaluates complex jump-chaining paths dynamically per turn.
+- **Axial Coordinate Grid Mapping:** Pure mathematical rendering maps `(q, r, s)` axial coordinates seamlessly to a responsive HTML/CSS isometric view.
+- **Auto-Mirror Perspective:** Fully automated 180-degree board rotation styling ensures that both Player 1 and Player 2 view their own starting pieces positioned safely at the bottom of the HUD.
 
 ## Platform Features
 
